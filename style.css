@@ -1,0 +1,202 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --fc-dark: hsl(185, 75%, 39%);
+  --fc-very-dark: hsl(229, 23%, 23%);
+  --fc-grey-blue: hsl(227, 10%, 46%);
+  --fc-neutral: hsl(0, 0%, 59%);
+  --fc-white: #ffffff;
+
+  --ff: "Kumbh Sans", sans-serif;
+  --fs-default: 1.125rem;
+  --fs-small: 1rem;
+  --fs-smaller: 0.75rem;
+  --fs-big: 1.25rem;
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --padding-16: 1em;
+  --padding-24: 1.5em;
+  --padding-48: 3em;
+}
+
+body {
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 50vw top -75vh, left 50vw top 41vh;
+
+  background-color: var(--fc-dark);
+  font-family: var(--ff);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-default);
+  color: var(--fc-very-dark);
+  text-align: center;
+
+  /* for display only*/
+  display: grid;
+  place-items: center;
+}
+h3 {
+  font-size: var(--fs-big);
+}
+/* Composition */
+
+/* Utilities */
+
+.padding {
+  padding: var(--padding-16);
+}
+.padding-24 {
+  padding: var(--padding-24);
+}
+.padding-24 {
+  padding: var(--padding-24);
+}
+.border-radius-1 {
+  border-radius: var(--fs-default);
+}
+.bg-white {
+  background-color: var(--fc-white);
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-row {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-justify-space-around {
+  justify-content: space-around;
+}
+.flex-align-end {
+  align-items: flex-end;
+}
+.font-size-smaller {
+  font-size: var(--fs-smaller);
+}
+.font-size-small {
+  font-size: var(--fs-small);
+}
+.font-size-big {
+  font-size: var(--fs-big);
+}
+.font-weight-400 {
+  font-weight: var(--fw-400);
+}
+
+.font-weight-700 {
+  font-weight: var(--fw-700);
+}
+.box-shadow {
+  box-shadow: 5px 9px 9px 1px rgba(121, 121, 121, 0.5);
+}
+/* Blocks */
+.card {
+  /* for display only*/
+  min-width: 350px;
+}
+
+.top {
+  background-image: url("./images/bg-pattern-card.svg");
+  min-height: 135px;
+  margin-bottom: 2em;
+}
+.top img {
+  border-radius: 50%;
+  align-self: flex-end;
+  margin-bottom: -50px;
+  border: 6px solid var(--fc-white);
+}
+
+/* Exceptions */
+
+.border-radius-bottom-0 {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.border-top-grey {
+  border-top: 1px solid var(--fc-neutral);
+}
+
+@media (min-width: 1375px) {
+}
